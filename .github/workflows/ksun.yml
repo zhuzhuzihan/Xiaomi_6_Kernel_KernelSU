@@ -72,7 +72,7 @@ jobs:
       - name: Build kernel
         run: |
           mkdir -p out
-          make O=out sakura_defconfig
+          make O=out sagit_user_defconfig
           # 显示一下 ccache 统计信息，方便查看缓存命中率
           make O=out -j$(nproc) KCFLAGS=-Wno-error
           ccache -s
